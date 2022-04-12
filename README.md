@@ -1,4 +1,4 @@
-# Readme for PNG tests of iCCP chunk
+# PNG tests of iCCP chunk
 
 ## How to run the tests
 
@@ -77,6 +77,7 @@ of each patch [are known](https://babelcolor.com/colorchecker-2.htm#CCP2_data).
 ### sRGB version of color checker
 
 As a starting point, the patches were converted to sRGB.
+
 These tests are designed to be run on a normal screen; a wide gamut screen is not required.
 Thus, because the `cyan` patch is outside the sRGB gamut,
 (lab(50.555 -27.973 -28.13) is color(srgb -0.2 0.528 0.657))
@@ -191,6 +192,24 @@ so that it is obvious that they have been applied.
 
 Documenting the process, for verification and as a reminder should tests need to be added or modified.
 
+### Initial sRGB images
+
+The sRGB test image was [created in SVG](./workings/macbeth-sRGB.svg) and then
+a color-accurate conversion of SVG to PNG was created with [SVGtoPNG](https://svgtopng.com/).
+The RGB values were verified by dumping the palette entries:
+
+pngcheck -p foo.png
+
+and then checking them off one by one against the expected RGB values.
+
+For the reference, the mask image was [created in SVG](./workings/macbeth-circles.svg) then
+rasterised with [SVGtoPNG](https://svgtopng.com/).
+The [PNG raster mask](./workings/circles-mask.png)
+was converted [to PGM](./workings/circles-mask.pgm) with netpbm tools
+then merged in as an alpha channel using pnmtopng, again from NetPBM tools.
+
+### Overview of colorspace conversions
+
 1. Convert image data from sRGB to destination colorspace (I used [Little CMS Color Translator](https://www.littlecms.com/translator/), with relative colorimetric rendering intent, sRGB as source colorspace, and desired new colorspace as the destination colorspace.)
 2. Run [PNGcheck](http://www.libpng.org/pub/png/apps/pngcheck.html) to be sure result is valid
 3. If the conversion tool does not embed the profile (or embeds an incorrect or modified one) add in the profile. I used [pngcrush](https://pmt.sourceforge.io/pngcrush/).
@@ -198,7 +217,7 @@ Documenting the process, for verification and as a reminder should tests need to
 5. View the PNG image, in a browser
 6. Make an HTML test file that overlays the result PNG with an sRGB reference.
 
-### Apply an ICC profile
+### To apply an ICC profile
 
 For ICC v2 or v4 profiles, LittleCMS is a good implementation.
 *It does not support ICC2 (iccMAX).*
@@ -215,19 +234,19 @@ Input and output images must be in TIFF format, only.
 The NetPBM utilities can be used to convert between PNG and TIFF
 (image data and alpha only).
 
-### Extract ICC profile
+### To extract ICC profile
 
 The command to extract an existing ICC profile from an image is:
 
 exiftool -icc_profile -b -w icc somefile.png
 
-### Remove an ICC profile
+### To remove an ICC profile
 
 To remove an embedded profile (for example to create a rendering of a test failure):
 
 pngcrush -rem iCCP foo.png result.png
 
-### Embed ICC prolile
+### To embed an ICC prolile
 
 This just adds an ICC profile into an `iCCP` chunk;
 it does not *apply* the profile to the image data,
@@ -247,7 +266,7 @@ To list profile names, or profile descriptions:
 exiftool -profiledescription *.png
 exiftool -profilename *.png
 
-### Read ICC profile and convert back to sRGB
+### To read ICC profile and convert back to sRGB
 
 As a round-trip test, I used [squoosh](https://squoosh.app/editor)
 whose source is [on GitHub](https://github.com/GoogleChromeLabs/squoosh).
@@ -324,9 +343,6 @@ Here is the output of a png checker on a round-tripped sRGB image. The palette c
     chunk IEND at offset 0x0069b, length 0
     No errors detected in indexed.png (4 chunks, 99.4% compression).
 
-
-
 ## Bugs
 
 pngcrush -srgb 1 foo.png bar.png is supposed to add an sRGB chunk but sadly it adds a gAMA instead (!!) at least, if foo.png is indexed.
-

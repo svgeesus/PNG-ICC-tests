@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 45" width="670" height="450">
+<desc>Circular mask image for Macbeth color checker comparison
+</desc>
+<style>
+circle { fill: black}
+</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<g id="macbeth">
+<g class="row1">
+<g class="dark_skin">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="light_skin" transform="translate(11,0)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="blue_sky" transform="translate(22,0)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="foliage" transform="translate(33,0)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="blue_flower" transform="translate(44,0)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="bluish_green" transform="translate(55,0)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+</g>
+<g class="row2">
+<g class="orange" transform="translate(0,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="purplish_blue" transform="translate(11,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="moderate_red" transform="translate(22,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="purple" transform="translate(33,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="yellow_green" transform="translate(44,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="orange_yellow" transform="translate(55,11)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+</g>
+<g class="row3">
+<g class="blue" transform="translate(0,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="green" transform="translate(11,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="red" transform="translate(22,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="yellow" transform="translate(33,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="magenta" transform="translate(44,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="desat_cyan" transform="translate(55,22)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+</g>
+<g class="row4">
+<g class="white_95" transform="translate(0,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="neutral_8" transform="translate(11,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="neutral_65" transform="translate(22,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="neutral_5" transform="translate(33,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="neutral_35" transform="translate(44,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+<g class="black_2" transform="translate(55,33)">
+    <circle r="3" cx="6" cy="6"/>
+</g>
+</g>
+</g>
+</svg>
