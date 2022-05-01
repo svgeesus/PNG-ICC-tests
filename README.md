@@ -36,7 +36,7 @@ the browser is right and the tests must be wrong._
 The test images show a Macbeth color checker,
 which is an industry standard test chart
 of 24 colored patches in a 6x4 grid.
-The CIE D50 Lab values (calculated from averaged measured spectra of 20 test charts)
+The  D50 CIE Lab values (calculated from averaged measured spectra of 20 test charts)
 of each patch [are known](https://babelcolor.com/colorchecker-2.htm#CCP2_data).
 
 <table>
@@ -81,7 +81,7 @@ As a starting point, the patches were converted to sRGB.
 These tests are designed to be run on a normal screen; a wide gamut screen is not required.
 Thus, because the `cyan` patch is outside the sRGB gamut,
 (lab(50.555 -27.973 -28.13) is color(srgb -0.2 0.528 0.657))
-fot these tests the CIE LCH chroma was reduced to lab(50.555 -23.759 -23.900)
+for these tests the CIE LCH chroma was reduced to lab(50.555 -23.759 -23.900)
 so that it was within gamut.
 
 The sRGB values below are rounded to 8-bit (0 to 255) precision and given as decimal values.
@@ -138,7 +138,7 @@ which produces a patch of the correct color
 with a circular hole in the middle of each patch
 to allow the test image to show.
 If the ICC profile is being applied,
-the patch and the circle will be the same color
+the patch and the circle (te test image, showing through) will be the same color
 so the circles will not be visible.
 
 ![sRGB macbeth image](./tests/support/reference-circles.png)
