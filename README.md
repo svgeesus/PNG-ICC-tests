@@ -138,7 +138,7 @@ which produces a patch of the correct color
 with a circular hole in the middle of each patch
 to allow the test image to show.
 If the ICC profile is being applied,
-the patch and the circle (te test image, showing through) will be the same color
+the patch and the circle (the test image, showing through) will be the same color
 so the circles will not be visible.
 
 ![sRGB macbeth image](./tests/support/reference-circles.png)
