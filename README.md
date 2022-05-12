@@ -15,7 +15,7 @@ are visibly different to the surrounding rectanguar patches (in sRGB).
 This failure indicates that the PNG image data is not being interpreted
 according to the embedded ICC profile.
 
-[Test results](results.md)
+[Test results](https://svgees.us/PNG/iCCP/results.html)
 
 ### Typical pass
 
@@ -162,6 +162,8 @@ Display was profiled with an [X-Rite i1Pro2 spectrophotometer](https://www.xrite
 [DisplayCAL](https://displaycal.net/) software.
 
 On Mac, test system was a MacBook Pro 16-inch 2019, using the factory Display P3 profile.
+
+[View test results](https://svgees.us/PNG/iCCP/results.html)
 
 ## ICC profiles used
 
