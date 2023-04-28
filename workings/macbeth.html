@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <title>MacBeth color checker</title>
+<!-- 
+    Show a MacBeth color checker.
+    Rectangular patches are sRGB, converted from averaged measured Lab values.
+    Note: the cyan patch has has the LCH Chroma reduced,
+    to bring it inside the sRGB gamut.
+    See file Macbeth.txt in the CSS Color 5 workings directory for details.
+ -->
+<style>
+    .outer { 
+        display: grid; 
+        grid-template-columns: repeat(6, 6.8em); 
+        grid-template-rows: repeat(4, 6.8em); 
+        grid-auto-flow: row;
+        margin: 0.8em;
+    }
+    div {width: 6em; height: 6em; margin: 0.4em;  }
+    .border {background-color: #222;}
+    .dark_skin { background-color: rgb(45.8702% 32.0071% 26.3813%)}
+    .light_skin { background-color: rgb(78.0170% 58.1957% 50.7737%)}
+    .blue_sky { background-color: rgb(35.8614% 48.0665% 61.6556%)}
+    .foliage { background-color: rgb(34.9582% 42.3446% 25.4209%)}
+    .blue_flower { background-color: rgb(51.2952% 50.4131% 68.9186%)}
+    .bluish_green { background-color: rgb(36.8792% 74.3685% 67.4749%)}
+    .orange { background-color: rgb(87.3729% 48.7430% 17.2037%)}
+    .purplish_blue { background-color: rgb(27.0560% 36.0687% 65.7971%)}
+    .moderate_red { background-color: rgb(78.2366% 32.9961% 38.2061%)}
+    .purple { background-color: rgb(36.0261% 23.3161% 40.6449%)}
+    .yellow_green { background-color: rgb(62.3751% 74.0184% 24.7942%)}
+    .orange_yellow { background-color: rgb(90.4681% 63.3661% 15.2514%)}
+    .blue { background-color: rgb(15.4346% 24.3828% 57.7067%)}
+    .green { background-color: rgb(26.3893% 58.1384% 28.6863%)}
+    .red { background-color: rgb(71.3817% 18.0672% 22.0930%)}
+    .yellow { background-color: rgb(94.0483% 78.3571% 08.8101%)}
+    .magenta { background-color: rgb(75.57340% 32.8857% 58.4776%)}
+    .desat_cyan { background-color: rgb(00.0904% 52.0570% 62.8808%)}
+    .white_95 { background-color: rgb(96.1749% 95.9684% 94.2031%)}
+    .neutral_8 { background-color: rgb(78.4876% 79.0090% 78.7352%)}
+    .neutral_65 { background-color: rgb(62.8550% 63.2928% 63.2408%)}
+    .neutral_5 { background-color: rgb(46.9112% 47.6060% 47.6211%)}
+    .neutral_35 { background-color: rgb(32.4963% 33.0535% 33.2257%)}
+    .black_2 { background-color: rgb(19.4628% 19.5396% 19.7948%)}
+    </style>
+    <body class="outer border">
+        <div class="dark_skin"></div>
+        <div class="light_skin"></div>
+        <div class="blue_sky"></div>
+        <div class="foliage"></div>
+        <div class="blue_flower"></div>
+        <div class="bluish_green"></div>
+        <div class="orange"></div>
+        <div class="purplish_blue"></div>
+        <div class="moderate_red"></div>
+        <div class="purple"></div>
+        <div class="yellow_green"></div>
+        <div class="orange_yellow"></div>      
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="magenta"></div>
+        <div class="desat_cyan"></div>
+        <div class="white_95"></div>
+        <div class="neutral_8"></div>
+        <div class="neutral_65"></div>
+        <div class="neutral_5"></div>
+        <div class="neutral_35"></div>
+        <div class="black_2"></div>
+    </body>
